@@ -14,6 +14,7 @@ import android.view.MenuItem
 import android.widget.TextView
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -70,6 +71,10 @@ class MainActivity : AppCompatActivity() {
             for(i in si..ei){
                 s[i]=bf.getShort(i)
             }
+
+            //Create an instance of fft
+            var fft = FFT4g(FFT_SIZE)
+
         }
 
         //録音停止
